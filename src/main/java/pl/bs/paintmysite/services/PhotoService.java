@@ -26,14 +26,18 @@ public class PhotoService {
     }
 
     public void create(PhotoMsg photoMsg) {
-        ModelMapper modelMapper = new ModelMapper();
-        Photo photo = modelMapper.map(photoMsg, Photo.class);
+        Photo photo = new Photo();
+        photo.setProjectId(photoMsg.getProjectId());
+        photo.setOrderInProject(photoMsg.getOrderInProject());
+        photo.setUrl(photoMsg.getUrl());
         photoRepository.save(photo);
     }
 
     public void update(Long id, PhotoMsg photoMsg) {
-        ModelMapper modelMapper = new ModelMapper();
-        Photo photo = modelMapper.map(photoMsg, Photo.class);
+        Photo photo = new Photo();
+        photo.setProjectId(photoMsg.getProjectId());
+        photo.setOrderInProject(photoMsg.getOrderInProject());
+        photo.setUrl(photoMsg.getUrl());
         photo.setId(id);
         photoRepository.save(photo);
     }

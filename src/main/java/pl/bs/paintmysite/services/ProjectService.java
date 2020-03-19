@@ -31,15 +31,19 @@ public class ProjectService {
     }
 
     public void create(ProjectMsg projectMsg) {
-        ModelMapper modelMapper = new ModelMapper();
-        Project project = modelMapper.map(projectMsg, Project.class);
+        Project project = new Project();
+        project.setCategoryId(projectMsg.getCategoryId());
+        project.setDescription(projectMsg.getDescription());
+        project.setName(projectMsg.getName());
         project.setPhotos(Collections.emptyList());
         projectRepository.save(project);
     }
 
     public void update(Long id, ProjectMsg projectMsg) {
-        ModelMapper modelMapper = new ModelMapper();
-        Project project = modelMapper.map(projectMsg, Project.class);
+        Project project = new Project();
+        project.setCategoryId(projectMsg.getCategoryId());
+        project.setDescription(projectMsg.getDescription());
+        project.setName(projectMsg.getName());
         project.setId(id);
         project.setPhotos(projectRepository.findById(id).orElseThrow(()-> new RuntimeException("Such project does not exist.")).getPhotos());
         projectRepository.save(project);

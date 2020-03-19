@@ -16,7 +16,7 @@ public class UserService {
     }
 
     public User get() {
-        return userRepository.getUserById(0L);
+        return userRepository.findById(0L).orElseThrow(() -> new RuntimeException("There is no admin data in db"));
     }
 
     public void update(UserMsg userMsg) {

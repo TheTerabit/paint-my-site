@@ -1,9 +1,7 @@
 package pl.bs.paintmysite.configuration;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Service;
 import pl.bs.paintmysite.models.User;
 import pl.bs.paintmysite.repositories.UserRepository;
 

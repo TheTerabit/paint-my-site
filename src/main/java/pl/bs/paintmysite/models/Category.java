@@ -15,9 +15,10 @@ public class Category {
     @SequenceGenerator(name = "myCategorySeqGen", sequenceName = "myCategorySeq", initialValue = 0, allocationSize = 100)
     @GeneratedValue(generator = "myCategorySeqGen")
     @Column(name = "id")
-    private Long categoryId;
+    private Long id;
     private String name;
     private String description;
+    private String photoUrl;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="category_id", referencedColumnName = "id")

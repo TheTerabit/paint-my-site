@@ -6,4 +6,5 @@ import pl.bs.paintmysite.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
+    public User getUserById(Long id);
 }

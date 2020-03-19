@@ -3,6 +3,7 @@ package pl.bs.paintmysite.services;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import pl.bs.paintmysite.controllers.msg.CategoryMsg;
+import pl.bs.paintmysite.controllers.msg.ProjectMsg;
 import pl.bs.paintmysite.models.Category;
 import pl.bs.paintmysite.models.User;
 import pl.bs.paintmysite.repositories.CategoryRepository;
@@ -46,4 +47,5 @@ public class CategoryService {
         category.setId(id);
         categoryRepository.save(category);
     }
+
 }

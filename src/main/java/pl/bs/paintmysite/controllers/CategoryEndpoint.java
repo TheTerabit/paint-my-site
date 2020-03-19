@@ -41,7 +41,4 @@ public class CategoryEndpoint {
     public void delete(@PathVariable("id") Long id) {
         categoryService.delete(id);
     }
-
-
-
 }

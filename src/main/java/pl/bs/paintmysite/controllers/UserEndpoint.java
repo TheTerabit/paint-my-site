@@ -8,6 +8,7 @@ import pl.bs.paintmysite.services.UserService;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin
 public class UserEndpoint {
 
     private final UserService userService;

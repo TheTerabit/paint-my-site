@@ -20,7 +20,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests().antMatchers(HttpMethod.DELETE).fullyAuthenticated()
                 .and().httpBasic();
         //httpSecurity.csrf().disable();
+        try{
+
+        }finally {
+
+        }
     }
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {

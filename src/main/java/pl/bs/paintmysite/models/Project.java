@@ -12,8 +12,8 @@ import java.util.List;
 public class Project {
 
     @Id
-    @SequenceGenerator(name = "myReservationGen", sequenceName = "myReservationSeq", initialValue = 0, allocationSize = 100)
-    @GeneratedValue(generator = "myReservationGen")
+    @SequenceGenerator(name = "myProjectGen", sequenceName = "myProjectSeq", initialValue = 0, allocationSize = 100)
+    @GeneratedValue(generator = "myProjectGen")
     @Column(name = "id")
     private Long id;
     private String name;

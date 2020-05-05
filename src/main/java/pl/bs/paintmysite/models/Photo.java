@@ -15,6 +15,8 @@ public class Photo {
     @GeneratedValue(generator = "myPhotoGen")
     @Column(name = "id")
     private Long id;
+
+    @Column(length = 10000)
     private String url;
     private Integer orderInProject;
 

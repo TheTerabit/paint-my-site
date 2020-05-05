@@ -8,6 +8,7 @@ import pl.bs.paintmysite.services.PhotoService;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/photos")
 public class PhotoEndpoint {

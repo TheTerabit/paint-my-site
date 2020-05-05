@@ -8,6 +8,7 @@ import pl.bs.paintmysite.services.ProjectService;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/projects")
 public class ProjectEndpoint {

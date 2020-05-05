@@ -7,6 +7,7 @@ import pl.bs.paintmysite.services.CategoryService;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/categories")
 public class CategoryEndpoint {

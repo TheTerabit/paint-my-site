@@ -20,6 +20,7 @@ public class User {
     private String jobTitle;
     private String phoneNumber;
     private String email;
+    @Column(length = 10000)
     private String profilePictureUrl;
     @Column(length = 10000)
     private String aboutMe;

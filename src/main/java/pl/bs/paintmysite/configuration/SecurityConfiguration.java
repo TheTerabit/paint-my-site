@@ -20,6 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests().antMatchers(HttpMethod.DELETE).fullyAuthenticated()
                 .and().httpBasic();
         httpSecurity.csrf().disable();
+        httpSecurity.cors();
         try{
 
         }finally {

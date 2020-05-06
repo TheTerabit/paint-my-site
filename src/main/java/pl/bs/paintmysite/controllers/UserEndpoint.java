@@ -29,7 +29,7 @@ public class UserEndpoint {
 
     @PostMapping
     public String post() {
-        return "OK";
+        return "{\"login\": \"OK\"}";
     }
 
 }

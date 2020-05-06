@@ -27,4 +27,9 @@ public class UserEndpoint {
         userService.update(userMsg);
     }
 
+    @PostMapping
+    public String post() {
+        return "OK";
+    }
+
 }

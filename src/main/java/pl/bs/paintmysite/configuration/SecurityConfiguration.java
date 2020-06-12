@@ -15,9 +15,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.GET).permitAll()
-                .and().authorizeRequests().antMatchers(HttpMethod.POST).fullyAuthenticated()
-                .and().authorizeRequests().antMatchers(HttpMethod.PUT).fullyAuthenticated()
-                .and().authorizeRequests().antMatchers(HttpMethod.DELETE).fullyAuthenticated()
+                .and().authorizeRequests().antMatchers("/user/send-email").permitAll()
+                .and().authorizeRequests().anyRequest().fullyAuthenticated()
                 .and().httpBasic();
         httpSecurity.csrf().disable();
         httpSecurity.cors();

@@ -2,6 +2,7 @@ package pl.bs.paintmysite.controllers;
 
 import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.web.bind.annotation.*;
+import pl.bs.paintmysite.controllers.msg.EmailMsg;
 import pl.bs.paintmysite.controllers.msg.UserMsg;
 import pl.bs.paintmysite.models.User;
 import pl.bs.paintmysite.services.UserService;
@@ -30,6 +31,11 @@ public class UserEndpoint {
     @PostMapping
     public String post() {
         return "{\"login\": \"OK\"}";
+    }
+
+    @PostMapping("/send-email")
+    public void sendEmail(@RequestBody EmailMsg emailMsg) {
+        userService.sendEmail(emailMsg);
     }
 
 }
